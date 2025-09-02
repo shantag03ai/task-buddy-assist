@@ -2,41 +2,93 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* Task Management Design System - All colors, gradients, fonts, etc defined here. 
+All colors MUST be HSL for consistency and theming.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Core theme - Professional indigo/blue */
+    --background: 248 50% 98%;
+    --foreground: 224 71% 4%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 224 71% 4%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 224 71% 4%;
 
-    --primary: 222.2 47.4% 11.2%;
+    /* Primary - Professional indigo for trust and reliability */
+    --primary: 235 85% 55%;
     --primary-foreground: 210 40% 98%;
+    --primary-glow: 235 85% 70%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - Light indigo for subtle elements */
+    --secondary: 235 20% 96%;
+    --secondary-foreground: 235 85% 45%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted - Clean grays */
+    --muted: 235 13% 94%;
+    --muted-foreground: 235 16% 65%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent - Slightly different blue for highlights */
+    --accent: 220 85% 55%;
+    --accent-foreground: 210 40% 98%;
 
-    --destructive: 0 84.2% 60.2%;
+    /* Status colors for task management */
+    --success: 142 76% 36%;
+    --success-foreground: 355 7% 97%;
+    --success-light: 142 76% 95%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    --warning-light: 38 92% 95%;
+
+    --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
+    --destructive-light: 0 84% 95%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Emergency - Critical tasks */
+    --emergency: 0 100% 45%;
+    --emergency-foreground: 0 0% 100%;
+    --emergency-light: 0 100% 96%;
 
-    --radius: 0.5rem;
+    /* Urgent - High priority tasks */
+    --urgent: 25 95% 53%;
+    --urgent-foreground: 0 0% 100%;
+    --urgent-light: 25 95% 96%;
+
+    /* Alert - Medium priority tasks */
+    --alert: 43 96% 56%;
+    --alert-foreground: 43 96% 15%;
+    --alert-light: 43 96% 95%;
+
+    /* Borders and inputs */
+    --border: 235 20% 88%;
+    --input: 235 20% 94%;
+    --ring: 235 85% 55%;
+
+    /* Dashboard specific */
+    --dashboard-bg: 235 15% 97%;
+    --sidebar-bg: 0 0% 100%;
+    --nav-hover: 235 85% 96%;
+
+    /* Gradients for beautiful effects */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-success: linear-gradient(135deg, hsl(var(--success)), hsl(142 76% 50%));
+    --gradient-warning: linear-gradient(135deg, hsl(var(--warning)), hsl(38 92% 60%));
+    --gradient-emergency: linear-gradient(135deg, hsl(var(--emergency)), hsl(0 100% 55%));
+
+    /* Shadows */
+    --shadow-soft: 0 2px 8px hsl(235 85% 55% / 0.1);
+    --shadow-medium: 0 4px 16px hsl(235 85% 55% / 0.15);
+    --shadow-strong: 0 8px 32px hsl(235 85% 55% / 0.2);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 

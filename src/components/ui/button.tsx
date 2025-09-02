@@ -18,6 +18,13 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        // Task Management specific variants
+        manager: "bg-gradient-primary text-primary-foreground hover:shadow-medium transition-all duration-300 font-semibold",
+        staff: "bg-accent text-accent-foreground hover:bg-accent/90 border border-accent/20",
+        emergency: "bg-emergency text-emergency-foreground hover:bg-emergency/90",
+        urgent: "bg-urgent text-urgent-foreground hover:bg-urgent/90",
+        alert: "bg-alert text-alert-foreground hover:bg-alert/90",
+        success: "bg-success text-success-foreground hover:bg-success/90",
       },
       size: {
         default: "h-10 px-4 py-2",

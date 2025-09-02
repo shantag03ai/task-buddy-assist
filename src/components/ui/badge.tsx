@@ -15,6 +15,12 @@ const badgeVariants = cva(
         destructive:
           "border-transparent bg-destructive text-destructive-foreground hover:bg-destructive/80",
         outline: "text-foreground",
+        // Task Management specific variants
+        emergency: "border-transparent bg-emergency text-emergency-foreground hover:bg-emergency/80",
+        urgent: "border-transparent bg-urgent text-urgent-foreground hover:bg-urgent/80",
+        alert: "border-transparent bg-alert text-alert-foreground hover:bg-alert/80",
+        success: "border-transparent bg-success text-success-foreground hover:bg-success/80",
+        primary: "border-transparent bg-primary text-primary-foreground hover:bg-primary/80",
       },
     },
     defaultVariants: {
