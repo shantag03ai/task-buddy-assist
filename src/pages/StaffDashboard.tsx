@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { AlertTriangle, Clock, User, Calendar, Building2 } from "lucide-react";
+import BackButton from "@/components/BackButton";
 
 const StaffDashboard = () => {
   const [selectedEmployee, setSelectedEmployee] = useState<string>("");
@@ -177,14 +178,17 @@ const StaffDashboard = () => {
                 ))}
               </SelectContent>
             </Select>
-            <Button 
-              variant="staff" 
-              size="lg" 
-              className="w-full" 
-              disabled={!selectedEmployee}
-            >
-              View My Tasks
-            </Button>
+            <div className="flex gap-2">
+              <Button 
+                variant="staff" 
+                size="lg" 
+                className="flex-1" 
+                disabled={!selectedEmployee}
+              >
+                View My Tasks
+              </Button>
+              <BackButton to="/" label="Back" variant="outline" />
+            </div>
           </CardContent>
         </Card>
       </div>
@@ -196,6 +200,11 @@ const StaffDashboard = () => {
   return (
     <div className="min-h-screen bg-dashboard">
       <div className="container mx-auto p-6 space-y-6">
+        {/* Back Button */}
+        <div className="flex items-center justify-start">
+          <BackButton to="/" label="Back to Home" />
+        </div>
+
         {/* Header */}
         <div className="flex items-center justify-between">
           <div>

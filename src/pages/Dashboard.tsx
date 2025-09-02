@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Users, ClipboardList, AlertTriangle, Clock, CheckCircle } from "lucide-react";
+import BackButton from "@/components/BackButton";
 
 const Dashboard = () => {
   // Mock data for counters
@@ -15,6 +16,11 @@ const Dashboard = () => {
   return (
     <div className="min-h-screen bg-dashboard">
       <div className="container mx-auto p-6 space-y-6">
+        {/* Back Button */}
+        <div className="flex items-center justify-start">
+          <BackButton to="/" label="Back to Home" />
+        </div>
+
         {/* Header */}
         <div className="flex items-center justify-between">
           <div>
